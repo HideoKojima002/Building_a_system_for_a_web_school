@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Все URL</title>
+</head>
+<body>
+  <h1>Список всех URL c API</h1>
+  <ul>
+    <li><a href="{% url 'access-list-create' %}">История доступов(Чтение доступов)</a></li>
+    <li><a href="{% url 'manage-access' %}">Управление доступом(Чтение и добавление всех доступов через админку)</a></li>
+    <li><a href="{% url 'access-detail' 2 %}">Удаление доступа (пример: если пройтись по id в url то можно удалить нужный доступ)</a></li>
+    <li><a href="{% url 'lesson-list' %}">Список уроков</a></li>
+    <li><a href="{% url 'lesson-detail' 1 %}">Детали урока (пример: если пройтись по id в url то можно увидеть все детали уроков)</a></li>
+    <li><a href="{% url 'lesson-watch-list-create' %}">Список просмотров уроков</a></li>
+    <li><a href="{% url 'lesson-watch-detail' 1 %}">Детали просмотра (пример: если пройтись по id в url то можно увидеть все детали просмотров)</a></li>
+    <li><a href="{% url 'lesson-list-with-access' 1 %}">Список уроков с доступом (АPI с выведением списка уроков по конкретному продукту к которому пользователь имеет доступ)</a></li>
+    <li><a href="{% url 'access-request' %}">Запросить доступ</a></li>
+    <li><a href="{% url 'lesson-for-product' 1  %}">Получаем список уроков, принадлежащих конкретному продукту и доступных пользователю</a></li>
+    <li><a href="{% url 'product-statistics' %}">Статистика по продуктам</a></li>
+    <p></p>
+    <li><a href="admin/"><h4>Управление данными, через админку (добавление/удаление)</h4></a></li>
+  </ul>
+{% block content %}{% endblock %}
+
+</body>
+</html>
